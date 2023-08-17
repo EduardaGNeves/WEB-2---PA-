@@ -1,0 +1,26 @@
+<?php
+
+if(isset($_GET["inicio"]) && isset($_GET["razao"]) && isset($_GET["termo"])){
+    $in = $_GET["inicio"];
+    $ra = $_GET["razao"];
+    $te = $_GET["termo"];
+
+    for($i=0; $i<$te;$i++){
+        $pa= $in+($i*$ra);
+        echo $pa . "<br>";
+    }
+}
+
+elseif(!isset($_GET["in"])){
+    echo "Favor informar o primeiro parametro";
+}
+
+elseif(!isset($_GET["ra"])){
+    echo "Favor informar a razao";
+}
+
+elseif(!isset($_GET["te"])){
+    echo "Favor informar o termo";
+}
+
+?>
